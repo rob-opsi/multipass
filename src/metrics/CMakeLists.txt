@@ -17,5 +17,6 @@ add_library(metrics STATIC
 
 target_link_libraries(metrics
   fmt
+  utils
   Qt5::Core
   Qt5::Network)
