@@ -21,6 +21,8 @@
 #include <multipass/path.h>
 #include <multipass/virtual_machine.h>
 
+#include <yaml-cpp/yaml.h>
+
 #include <chrono>
 #include <functional>
 #include <string>
@@ -87,6 +89,8 @@ template <typename RegisteredQtEnum>
 QString qenum_to_qstring(RegisteredQtEnum val);
 template <typename RegisteredQtEnum>
 std::string qenum_to_string(RegisteredQtEnum val);
+std::string emit_yaml(const YAML::Node& node);
+std::string emit_cloud_config(const YAML::Node& node);
 
 } // namespace utils
 } // namespace multipass
